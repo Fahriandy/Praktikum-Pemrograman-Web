@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-sky-500 flex items-center justify-center min-h-screen font-sans">
+
+    <div class="w-full max-w-sm mx-auto">
+        <form id="search-form" class="mb-4">
+            <div class="flex gap-2">
+                <select id="city-select" class="flex-grow p-3 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-sky-300">
+                    <option value="" disabled selected>Pilih Kota...</option>
+                </select>
+                <button type="submit" class="bg-slate-800 text-white px-6 py-3 rounded-lg shadow-md hover:bg-slate-700 transition-colors">Lihat</button>
+            </div>
+        </form>
+
+        <div id="weather-card" class="rounded-lg shadow-xl overflow-hidden bg-white">
+            <div class="p-8 bg-white flex justify-center items-center">
+                <img id="weather-icon" src="images/icon_cuaca.png" alt="Ikon Cuaca" class="w-75 h-75">
+            </div>
+
+            <div class="bg-slate-800 text-white p-6 flex justify-between items-end">
+                <div>
+                    <h1 id="temperature" class="text-7xl font-bold"></h1>
+                    <p id="condition" class="text-xl"></p>
+                    <p id="location" class="text-sm text-gray-400"></p>
+                </div>
+                <div id="date-display" class="text-right">
+                    <p id="month" class="text-2xl font-semibold"></p>
+                    <p id="day" class="text-5xl font-bold"></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="error-message" class="hidden mt-4 bg-red-500 text-white text-center p-3 rounded-lg shadow-md">
+            Kota tidak terdaftar, masukkan kota yang lain.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
