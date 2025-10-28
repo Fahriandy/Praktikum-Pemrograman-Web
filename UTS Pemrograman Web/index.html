@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Form Mahasiswa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="left-card">
+      <h2 class="card-title">Input Data</h2>
+
+      <form id="mahasiswaForm" autocomplete="off">
+        <label class="label">NAMA LENGKAP</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required />
+
+        <label class="label">NIM</label>
+        <input type="text" id="nim" placeholder="12345678" required />
+
+        <label class="label">SEMESTER</label>
+        <input type="number" id="semester" min="1" max="14" placeholder="3" required />
+
+        <label class="label">PROGRAM STUDI</label>
+        <select id="prodi" required>
+          <option value="">-- Pilih --</option>
+          <option value="Teknik Informatika">Teknik Informatika</option>
+          <option value="Teknik Geologi">Teknik Geologi</option>
+          <option value="Teknik Mesin">Teknik Mesin</option>
+          <option value="Teknik Sipil">Teknik Sipil</option>
+        </select>
+
+        <label class="label">EMAIL</label>
+        <input type="email" id="email" placeholder="contoh@umkt.ac.id" required />
+
+        <button type="submit" class="btn-submit">KIRIM DATA</button>
+
+        <p class="hint">isi data mahasiswa dengan benar</p>
+      </form>
+    </section>
+
+    <section class="right-column">
+      <div class="info-card">
+        <h3>Informasi Pengiriman</h3>
+        <p class="info-lead">Apa yang terjadi saat Anda klik "Kirim Data"?</p>
+        <ul class="info-list">
+          <li> Data ditampilkan di console</li>
+          <li> Data disimpan di array</li>
+          <li> Jumlah data di-update</li>
+          <li> Form akan kosong kembali</li>S
+        </ul>
+      </div>
+
+      <div class="table-card">
+        <h3>Table Mahasiswa</h3>
+        <div class="table-meta">Jumlah data: <span id="jumlahData">1</span></div>
+
+        <table id="mahasiswaTable">
+          <thead>
+            <tr>
+              <th>NO</th>
+              <th>NAMA</th>
+              <th>INFO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Fahriandy Adithia</td>
+              <td>
+                <div class="info-line">Prodi: Teknik Informatika</div>
+                <div class="info-line">Semester: 3</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
